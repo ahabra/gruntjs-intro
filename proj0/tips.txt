@@ -1,0 +1,12 @@
+
+At ccommand line:
+npm install grunt --save-dev
+npm install grunt-contrib-jshint --save-dev
+npm install grunt-contrib-jasmine --save-dev
+npm install grunt-jsbeautifier --save-dev
+npm install grunt-contrib-concat --save-dev
+npm install grunt-contrib-uglify --save-dev
+
+In Gruntfile.js:
+grunt.loadNpmTasks('grunt-contrib-jshint');
+grunt.registerTask('default', ['jshint']);

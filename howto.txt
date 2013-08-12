@@ -1,0 +1,34 @@
+1. npm install -g grunt-cli
+
+2. create package.json
+{
+  "name": "proj1",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-uglify": "~0.2.2"
+  }
+}
+
+3. npm install grunt --save-dev
+
+4. create Gruntfile.js
+module.exports = function(grunt) {
+	grunt.initConfig({
+		jshint: {
+			files: ['Gruntfile.js', 'src/**/*.js'],
+			options: {
+				globals: {
+					jQuery: true,
+					console: true,
+					module: true
+				}
+			}
+		}
+	});
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.registerTask('default', ['jshint']);
+};
+
+5. npm install grunt-contrib-jshint --save-dev
